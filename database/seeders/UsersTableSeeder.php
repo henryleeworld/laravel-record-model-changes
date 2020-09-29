@@ -1,6 +1,8 @@
 <?php
 
-use App\User;
+namespace Database\Seeders;
+
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class UsersTableSeeder extends Seeder
@@ -16,8 +18,6 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => null,
             ],
         ];
-
         User::insert($users);
-
     }
 }

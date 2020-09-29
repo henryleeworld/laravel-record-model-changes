@@ -1,8 +1,9 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use OwenIt\Auditing\Contracts\Auditable as AuditableContract;
@@ -10,7 +11,7 @@ use OwenIt\Auditing\Auditable;
 
 class User extends Authenticatable implements AuditableContract
 {
-    use Notifiable, Auditable;
+    use Auditable, HasFactory, Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -18,7 +19,9 @@ class User extends Authenticatable implements AuditableContract
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name',
+        'email',
+        'password',
     ];
 
     /**
@@ -27,7 +30,8 @@ class User extends Authenticatable implements AuditableContract
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password',
+        'remember_token',
     ];
 
     /**
