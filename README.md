@@ -26,5 +26,5 @@ $ php artisan migrate --seed
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/f0UBmaR.png
+![](https://i.imgur.com/f0UBmaR.png)
 > 提供可能的差異或不規則來表達商業行為或可疑活動
