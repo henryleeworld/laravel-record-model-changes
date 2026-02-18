@@ -1,4 +1,4 @@
-# Laravel 10 記錄模型異動
+# Laravel 11 記錄模型異動
 
 引入 owen-it 的 laravel-auditing 套件來擴增記錄模型的異動日誌，允許您僅使用特徵機制即可保留模型異動的歷史記錄，取得稽核的資料非常簡單，從而可以以多種方式顯示它們。
 
@@ -21,10 +21,10 @@ $ php artisan key:generate
 $ php artisan migrate --seed
 ```
 - 在瀏覽器中輸入已定義的路由 URL 來訪問，例如：http://127.0.0.1:8000。
-- 你可以經由 `/` 來進行模型異動記錄。
+- 你可以經由 `/users` 來進行模型異動記錄。
 
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/f0UBmaR.png)
+![](https://i.imgur.com/mHy2vBa.png)
 > 提供可能的差異或不規則來表達商業行為或可疑活動

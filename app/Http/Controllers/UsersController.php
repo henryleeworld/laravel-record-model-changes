@@ -10,18 +10,16 @@ class UsersController extends Controller
     {
         // Get first available User
         $user = User::first();
-        $user->name = 'Yon Rogg';
+        $user->name = __('User');
         $user->save();
-        // Get all associated Audits
         /*
         $all = $user->audits;
-        echo '取得全部稽核：' . PHP_EOL;
+        echo __('Get all audits: ') . PHP_EOL;
         var_dump($all);
         echo PHP_EOL;
         */		
-        // Get first Audit
+        echo __('Get the first audit: ') . PHP_EOL;
         $first = $user->audits()->first();
-        echo '取得第一次稽核：' . PHP_EOL;
         var_dump($first);
     }
 }
